@@ -4,3 +4,7 @@ spring:
     username: root
     password: 123456
     url: jdbc:mysql://localhost:3306/hxg
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
