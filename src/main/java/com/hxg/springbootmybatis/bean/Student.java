@@ -2,16 +2,17 @@ package com.hxg.springbootmybatis.bean;
 
 import org.springframework.web.bind.annotation.GetMapping;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "CM_STUDENT")
+/*oracle
+@SequenceGenerator(name = "girlSeq", allocationSize = 50, initialValue = 1, sequenceName = "SEQ_CM_STUDENT")*/
 public class Student {
     @Id
     @GeneratedValue
+    /*oracle
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "stuSeq")*/
     private Integer stuId;
     private String stuName;
     private Integer stuAge;
