@@ -2,36 +2,44 @@ package com.hxg.springbootmybatis.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.hxg.springbootmybatis.bean.People;
-import com.hxg.springbootmybatis.dao.TestDao;
-import com.hxg.springbootmybatis.service.TestService;
+import com.hxg.springbootmybatis.dao.MyBatisDao;
+import com.hxg.springbootmybatis.service.MyBatisService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.AutoConfigureOrder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 @Transactional
-@Service("testService")
-public class TestServiceImpl implements TestService {
+@Service("myBatisService")
+public class MyBatisServiceImpl implements MyBatisService {
 
     @Autowired
-    private TestDao testDao;
+    private MyBatisDao myBatisDao;
 
     @Override
     public List<People> list() {
-        return testDao.list();
+        return myBatisDao.list();
     }
 
     @Override
     public int save(People people) {
-        return testDao.save(people);
+        return myBatisDao.save(people);
     }
 
     @Override
     public List<People> selectByPage(Integer pn, Integer pageSize) {
         PageHelper.startPage(pn, pageSize);
-        return testDao.selectByPage(pn, pageSize);
+        return myBatisDao.selectByPage(pn, pageSize);
+    }
+
+    @Override
+    public List<People> mySelect(String name) {
+        return myBatisDao.mySelect(name);
+    }
+
+    @Override
+    public List<People> mySelect2(String name) {
+        return myBatisDao.mySelect2(name);
     }
 }
