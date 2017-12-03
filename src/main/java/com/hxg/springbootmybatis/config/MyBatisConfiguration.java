@@ -3,12 +3,14 @@ package com.hxg.springbootmybatis.config;
 import com.github.pagehelper.PageHelper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.PathMatchConfigurer;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 
 import java.util.Properties;
 
 @Configuration
-public class MyBatisConfiguration {
-	
+public class MyBatisConfiguration extends WebMvcConfigurationSupport {
+
 	
 	/*@Bean
 	public SqlSessionFactory sqlSessionFactoryBean(DataSource dataSource) throws Exception {
@@ -25,14 +27,15 @@ public class MyBatisConfiguration {
 		return sqlSessionFactoryBean.getObject();
 	}*/
 
-	
-	/**
-	 * 注册MyBatis分页插件PageHelper
-	 * @return
-	 */
-	@Bean
+
+    /**
+     * 注册MyBatis分页插件PageHelper
+     *
+     * @return
+     */
+    @Bean
     public PageHelper pageHelper() {
-		System.out.println("MyBatisConfiguration.pageHelper()");
+        System.out.println("MyBatisConfiguration.pageHelper()");
         PageHelper pageHelper = new PageHelper();
         Properties p = new Properties();
         p.setProperty("offsetAsPageNum", "true");
@@ -42,5 +45,14 @@ public class MyBatisConfiguration {
         return pageHelper;
     }
 
-	
+    public void configurePathMatch(PathMatchConfigurer configurer) {
+        super.configurePathMatch(configurer);
+        /**
+         * 设置是否后缀模式匹配
+         * 若设置为false的时候，前台是setUseTrailingSlashMatch为true
+         */
+        configurer.setUseSuffixPatternMatch(false).setUseTrailingSlashMatch(true);
+    }
+
+
 }

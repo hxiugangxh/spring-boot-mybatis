@@ -1,6 +1,5 @@
 package com.hxg.springbootmybatis.controller;
 
-import ch.qos.logback.core.rolling.helper.IntegerTokenConverter;
 import com.hxg.springbootmybatis.bean.People;
 import com.hxg.springbootmybatis.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
