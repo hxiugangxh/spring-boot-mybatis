@@ -5,11 +5,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.PathMatchConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import java.util.Properties;
 
 @Configuration
-public class MyBatisConfiguration extends WebMvcConfigurationSupport {
+public class MyBatisConf extends WebMvcConfigurerAdapter {
 
 	
 	/*@Bean

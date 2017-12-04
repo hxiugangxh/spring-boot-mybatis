@@ -8,4 +8,8 @@ spring:
     hibernate:
       ddl-auto: none
     show-sql: true
+  #必须要
+  http:
+    encoding:
+      force: true
 logging.level.com.hxg: debug
