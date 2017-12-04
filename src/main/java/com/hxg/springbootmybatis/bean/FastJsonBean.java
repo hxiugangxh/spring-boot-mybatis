@@ -9,6 +9,9 @@ public class FastJsonBean {
     @JSONField(format = "yyyy-MM-dd HH:mm")
     private Date date;
 
+    @JSONField(serialize = false)
+    private Integer age;
+
     public String getName() {
         return name;
     }
@@ -23,5 +26,13 @@ public class FastJsonBean {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
     }
 }

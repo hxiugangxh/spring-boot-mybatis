@@ -18,24 +18,6 @@ public class JpaController {
     @Autowired
     private PeopleRepository peopleRepository;
 
-    @GetMapping(value = "/test")
-    public String test() {
-
-        String str = "张三";
-
-        return str;
-    }
-
-    @GetMapping(value = "/fastJson")
-    public FastJsonBean fastJson() {
-
-        FastJsonBean fastJsonBean = new FastJsonBean();
-        fastJsonBean.setName("张三");
-        fastJsonBean.setDate(new Date());
-
-        return fastJsonBean;
-    }
-
     @GetMapping("/list")
     public List<Student> list() {
 
