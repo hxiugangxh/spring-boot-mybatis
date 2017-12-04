@@ -15,7 +15,7 @@ import java.nio.charset.Charset;
 import java.util.List;
 
 @Configuration
-public class RestCharSetConfig extends WebMvcConfigurerAdapter {
+public class RestCharSetConf extends WebMvcConfigurerAdapter {
 
     @Bean
     public HttpMessageConverter<String> responseBodyConverter() {
