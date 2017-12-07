@@ -14,4 +14,10 @@ public interface MyBatisService {
     List<People> mySelect(String name);
 
     List<People> mySelect2(String name);
+
+    List<People> listWithUpdateTime();
+
+    List<People> listProvider(People people);
+
+    List<People> listProvider2(People people);
 }

@@ -13,3 +13,6 @@ spring:
     encoding:
       force: true
 logging.level.com.hxg: debug
+
+mybatis:
+  mapper-locations: classpath:com/hxg/dao/*.xml

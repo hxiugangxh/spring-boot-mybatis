@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <pre>
+         传值: [[${name}]]
+         空值默认: <th:block th:text="${#strings.isEmpty(age)}? '--': ${age}">1231231</th:block>
+    </pre>
+</body>
+</html>

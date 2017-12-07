@@ -64,4 +64,21 @@ public class MyBatisController {
         return myBatisService.mySelect2(name);
     }
 
+    @GetMapping("/listWithUpdateTime")
+    public List<People> listWithUpdateTime() {
+
+        return myBatisService.listWithUpdateTime();
+    }
+
+    @GetMapping("/listProvider")
+    public List<People> listProvider(People people) {
+
+        return myBatisService.listProvider(people);
+    }
+
+    @GetMapping("/listProvider2")
+    public List<People> listProvider2(People people) {
+
+        return myBatisService.listProvider2(people);
+    }
 }

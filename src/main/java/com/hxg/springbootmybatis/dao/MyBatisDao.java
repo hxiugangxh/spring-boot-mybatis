@@ -25,4 +25,16 @@ public interface MyBatisDao {
 
     @Select("select * from PEOPLE where name like '%${name}%'")
     List<People> mySelect2(@Param("name") String name);
+
+    @Select("select * from PEOPLE")
+    @Results({
+            @Result(property = "updateTime", column = "update_time")
+    })
+    List<People> listWithUpdateTime();
+
+    @SelectProvider(type = MyBatisProvider.class, method = "listProvider")
+    List<People> listProvider(People people);
+
+    @SelectProvider(type = MyBatisProvider.class, method = "listProvider2")
+    List<People> listProvider2(People people);
 }

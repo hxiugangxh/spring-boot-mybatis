@@ -42,4 +42,19 @@ public class MyBatisServiceImpl implements MyBatisService {
     public List<People> mySelect2(String name) {
         return myBatisDao.mySelect2(name);
     }
+
+    @Override
+    public List<People> listWithUpdateTime() {
+        return myBatisDao.listWithUpdateTime();
+    }
+
+    @Override
+    public List<People> listProvider(People people) {
+        return myBatisDao.listProvider(people);
+    }
+
+    @Override
+    public List<People> listProvider2(People people) {
+        return myBatisDao.listProvider2(people);
+    }
 }

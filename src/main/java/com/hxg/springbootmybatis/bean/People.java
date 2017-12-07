@@ -4,15 +4,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.Date;
 
-@Entity
-@Table(name = "PEOPLE")
 public class People {
-    @Id
-    @GeneratedValue
     private Integer id;
     private String name;
     private Integer age;
+    private Date updateTime;
+    private String more;
 
     public Integer getId() {
         return id;
@@ -36,5 +35,21 @@ public class People {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    public String getMore() {
+        return more;
+    }
+
+    public void setMore(String more) {
+        this.more = more;
     }
 }
