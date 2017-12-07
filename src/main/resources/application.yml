@@ -15,4 +15,4 @@ spring:
 logging.level.com.hxg: debug
 
 mybatis:
-  mapper-locations: classpath:com/hxg/dao/*.xml
+  mapper-locations: classpath:mapper/*.xml
