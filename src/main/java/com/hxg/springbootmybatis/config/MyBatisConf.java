@@ -1,3 +1,4 @@
+/*
 package com.hxg.springbootmybatis.config;
 
 import com.github.pagehelper.PageHelper;
@@ -13,7 +14,8 @@ import java.util.Properties;
 public class MyBatisConf extends WebMvcConfigurerAdapter {
 
 
-	/*@Bean
+	*/
+/*@Bean
 	public SqlSessionFactory sqlSessionFactoryBean(DataSource dataSource) throws Exception {
 		SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
 		sqlSessionFactoryBean.setDataSource(dataSource);
@@ -26,14 +28,17 @@ public class MyBatisConf extends WebMvcConfigurerAdapter {
 	   sqlSessionFactoryBean.setMapperLocations(resolver
 				.getResources("classpath:/mybatis/*.xml"));
 		return sqlSessionFactoryBean.getObject();
-	}*/
+	}*//*
 
 
-    /**
+
+    */
+/**
      * 注册MyBatis分页插件PageHelper
      *
      * @return
-     */
+     *//*
+
     @Bean
     public PageHelper pageHelper() {
         System.out.println("MyBatisConfiguration.pageHelper()");
@@ -48,12 +53,15 @@ public class MyBatisConf extends WebMvcConfigurerAdapter {
 
     public void configurePathMatch(PathMatchConfigurer configurer) {
         super.configurePathMatch(configurer);
-        /**
+        */
+/**
          * 设置是否后缀模式匹配
          * 若设置为false的时候，前台是setUseTrailingSlashMatch为true
-         */
+         *//*
+
         configurer.setUseSuffixPatternMatch(false).setUseTrailingSlashMatch(true);
     }
 
 
 }
+*/
