@@ -12,7 +12,7 @@ import java.util.Properties;
 @Configuration
 public class MyBatisConf extends WebMvcConfigurerAdapter {
 
-	
+
 	/*@Bean
 	public SqlSessionFactory sqlSessionFactoryBean(DataSource dataSource) throws Exception {
 		SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
@@ -21,7 +21,7 @@ public class MyBatisConf extends WebMvcConfigurerAdapter {
 		
 		Interceptor[] plugins =  new Interceptor[]{pageHelper()};
 		sqlSessionFactoryBean.setPlugins(plugins);
-		
+
 		// 指定mybatisxml文件路径
 	   sqlSessionFactoryBean.setMapperLocations(resolver
 				.getResources("classpath:/mybatis/*.xml"));
