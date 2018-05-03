@@ -9,7 +9,7 @@
         <result property="name" column="name"/>
     </resultMap>
 
-    <select id="listStudent" resultType="com.hxg.springbootmybatis.controller.Student">
+    <select id="listStudent" resultType="MyStudent">
         SELECT name stu_name, age stu_age
         FROM people;
     </select>

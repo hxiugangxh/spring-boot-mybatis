@@ -1,9 +1,10 @@
-package com.hxg.springbootmybatis.controller;
+package com.hxg.springbootmybatis.bean;
 
 import lombok.Data;
 
 @Data
-public class Student {
+public class MyStudent {
     private String stuName;
     private Integer stuAge;
+
 }

@@ -1,5 +1,6 @@
 package com.hxg.springbootmybatis.controller;
 
+import com.hxg.springbootmybatis.bean.MyStudent;
 import com.hxg.springbootmybatis.dao.StudentXMLDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,12 +15,20 @@ public class StudentController {
     @Autowired
     private StudentXMLDao studentXMLDao;
 
-    @GetMapping("/getStudent")
-    public List<Map<String, Object>> getStudent() {
+    @GetMapping("/listMap")
+    public List<Map<String, Object>> listMap() {
 
         System.out.println("测试");
 
         return studentXMLDao.listMap();
+    }
+
+    @GetMapping("/listStudent")
+    public List<MyStudent> listStudent() {
+
+        System.out.println("测试");
+
+        return studentXMLDao.listStudent();
     }
 
 }
