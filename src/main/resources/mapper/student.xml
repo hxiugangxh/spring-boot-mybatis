@@ -16,7 +16,7 @@
 
     <select id="listMap" resultType="map">
         SELECT name stu_name, age stu_age
-        FROM people;
+        FROM people
     </select>
 
 </mapper>

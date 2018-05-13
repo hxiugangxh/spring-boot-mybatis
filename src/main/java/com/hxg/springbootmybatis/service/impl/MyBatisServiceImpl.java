@@ -1,6 +1,8 @@
 package com.hxg.springbootmybatis.service.impl;
 
+import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.hxg.springbootmybatis.bean.People;
 import com.hxg.springbootmybatis.dao.MyBatisDao;
 import com.hxg.springbootmybatis.service.MyBatisService;
@@ -30,7 +32,14 @@ public class MyBatisServiceImpl implements MyBatisService {
     @Override
     public List<People> selectByPage(Integer pn, Integer pageSize) {
         PageHelper.startPage(pn, pageSize);
-        return myBatisDao.selectByPage(pn, pageSize);
+
+        List<People> list = myBatisDao.selectByPage(pn, pageSize);
+
+        PageInfo page = new PageInfo(list);
+
+        System.out.println(page);
+
+        return list;
     }
 
     @Override
